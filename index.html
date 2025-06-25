@@ -20,10 +20,12 @@
         <!-- Login form start -->
 
         <div class="hero bg-base-200 min-h-screen">
+
             <!-- logo start -->
             <div class="absolute">
-                <div class="relative bottom-16" ><img src="assets/bg.png" alt="bg"></div>
-                <div class="relative bottom-84 z-10 flex justify-center w-20 h-16 mx-auto" ><img class="w-full" src="assets/Group.png" alt=""></div>
+                <div class="relative bottom-16"><img src="assets/bg.png" alt="bg"></div>
+                <div class="relative bottom-84 z-10 flex justify-center w-20 h-16 mx-auto"><img class="w-full"
+                        src="assets/Group.png" alt=""></div>
             </div>
             <!-- logo end -->
 
@@ -31,21 +33,27 @@
                 <div class="card-body">
                     <fieldset class="fieldset">
                         <label class="label font-medium text-black text-base ">Mobile Number</label>
-                        <input type="text" class="input rounded-full w-full py-4 bg-gray-100 border-none text-base font-light" placeholder="Enter your number" />
+                        <input id="phone-number" type="text"
+                            class="input rounded-full w-full py-4 bg-gray-100 border-none text-base font-light"
+                            placeholder="Enter your number" required />
                         <label class="label font-medium text-black text-base">4 Digit Pin</label>
-                        <input type="password" class="input rounded-full w-full py-4 bg-gray-100 border-none text-base font-light" placeholder="Enter 4 Digit Pin" />
+                        <input id="pin-number" type="password"
+                            class="input rounded-full w-full py-4 bg-gray-100 border-none text-base font-light"
+                            placeholder="Enter 4 Digit Pin" autocomplete="off" required />
 
-                        <button class="btn btn-primary mt-4 font-semibold text-xl rounded-full py-4">Login</button>
+                        <button id="login-button" class="btn btn-primary mt-4 font-semibold text-xl rounded-full py-4">Login</button>
                     </fieldset>
                 </div>
             </div>
         </div>
+
 
         <!-- Login form end -->
 
 
 
     </main>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
