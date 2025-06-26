@@ -164,7 +164,7 @@
 
                         <fieldset class="fieldset">
                             <legend class="fieldset-legend font-medium text-[#080808] text-base">Selet A Bank</legend>
-                            <select
+                            <select id="input-select-bank"
                                 class="select rounded-full font-light text-base bg-[#F4F5F7] text-[#080808] opacity-80">
                                 <option disabled selected>Select Bank</option>
                                 <option>Islami Bank</option>
@@ -178,21 +178,21 @@
 
 
                         <label class="label font-medium text-[#080808] text-base">Bank Account Number</label>
-                        <input type="text"
+                        <input id="input-bank-account" type="text"
                             class="input rounded-full font-light text-base bg-[#F4F5F7] text-[#080808] opacity-70"
                             placeholder="Enter 11 digit account number" />
 
                         <label class="label font-medium text-[#080808] text-base">Amount to Add</label>
-                        <input type="text"
+                        <input id="input-ammount-add" type="text"
                             class="input rounded-full font-light text-base bg-[#F4F5F7] text-[#080808] opacity-70"
                             placeholder="Add Amount to withdraw" />
 
                         <label class="label font-medium text-[#080808] text-base">Pin Number</label>
-                        <input type="password"
+                        <input id="input-pin-number" type="password"
                             class="input rounded-full font-light text-base bg-[#F4F5F7] text-[#080808] opacity-70"
                             placeholder="Enter 4 digit pin number" />
 
-                        <button class="btn bg-[#0874F2] text-white font-semibold text-xl rounded-full mt-4">Add
+                        <button id="add-money-button" class="btn bg-[#0874F2] text-white font-semibold text-xl rounded-full mt-4">Add
                             money</button>
                     </fieldset>
                 </div>
