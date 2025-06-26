@@ -6,7 +6,8 @@ console.log('home js connected');
  * step1: add event handler
  * prevent page reload after form submit
  * step2: get money to be added to the account balance
- * 
+ * get the pin number
+ * step: verify the pin number
  */
 
 
@@ -27,7 +28,8 @@ document.getElementById('add-money-button').addEventListener('click', function (
     // step 2: get money to be added to the account
 
     const ammountToAdd = document.getElementById('input-ammount-add').value;
-
+    const amountToAddNumber = parseFloat(ammountToAdd);
+    console.log(amountToAddNumber)
     // step 3: get the pin number provided
     const inputPinNumber = document.getElementById('input-pin-number').value;
 
@@ -35,12 +37,20 @@ document.getElementById('add-money-button').addEventListener('click', function (
     // wrong way to verify 
 
     if (inputPinNumber === '1234') {
-        console.log('money added')
-        console.log(bankSelect);
-        console.log(bankAccountNumber)
-        console.log(ammountToAdd);
-        console.log(inputPinNumber);
 
+        // step 4: get the current balance
+
+        const balance = document.getElementById('account-balance').innerText;
+        const balanceNumber = parseFloat(balance);
+        console.log(balanceNumber);
+
+        // step 5: add addMoney input with balance
+
+        const newBalance = balanceNumber + amountToAddNumber;
+        console.log(newBalance);
+        console.log(typeof newBalance, typeof balanceNumber, typeof amountToAddNumber)
+
+        // step 6: update the balance in the UI/DOM
 
 
     }
