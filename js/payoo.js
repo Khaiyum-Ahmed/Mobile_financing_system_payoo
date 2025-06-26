@@ -29,29 +29,32 @@ document.getElementById('add-money-button').addEventListener('click', function (
 
     const ammountToAdd = document.getElementById('input-ammount-add').value;
     const amountToAddNumber = parseFloat(ammountToAdd);
-    console.log(amountToAddNumber)
+    // console.log(amountToAddNumber)
     // step 3: get the pin number provided
     const inputPinNumber = document.getElementById('input-pin-number').value;
 
+
+    // step 4: get the current balance
+
+        const balance = document.getElementById('account-balance').innerText;
+        const balanceNumber = parseFloat(balance);
+        // console.log(balanceNumber);
 
     // wrong way to verify 
 
     if (inputPinNumber === '1234') {
 
-        // step 4: get the current balance
-
-        const balance = document.getElementById('account-balance').innerText;
-        const balanceNumber = parseFloat(balance);
-        console.log(balanceNumber);
+        
 
         // step 5: add addMoney input with balance
 
         const newBalance = balanceNumber + amountToAddNumber;
-        console.log(newBalance);
-        console.log(typeof newBalance, typeof balanceNumber, typeof amountToAddNumber)
+        // console.log(newBalance);
+        // console.log(typeof newBalance, typeof balanceNumber, typeof amountToAddNumber);
 
         // step 6: update the balance in the UI/DOM
 
+        document.getElementById('account-balance').innerText =  newBalance;
 
     }
     else {
