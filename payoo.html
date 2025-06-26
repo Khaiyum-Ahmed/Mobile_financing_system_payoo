@@ -1,13 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>payoo home page</title>
+    <!-- Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
+
 <body>
-    <main>
-        <h1>welcome to home page</h1>
+    <main class=" max-w-md md:mx-auto ">
+
+        <!-- back bar start -->
+
+        <div class="hero block pt-8">
+            <div class="hero-content w-[450px] flex justify-between  px-6">
+
+                <!-- balance start -->
+
+                <div class="stats flex justify-between items-center">
+                    <div class="flex justify-center w-20 h-16 mx-auto"><img src="assets/Group.png" alt="">
+                    </div>
+
+                    <div class="">
+                        <div class="stat-value">$45000</div>
+                        <div class="stat-title font-normal text-[14px]">Available Balance</div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <button class="btn btn-outline font-normal text-[14px] border-gray-300"><span><i
+                                class="fa-solid fa-right-from-bracket"></i></span>Log
+                        Out</button>
+                </div>
+
+                <!-- balance end -->
+
+            </div>
+        </div>
+
+        <!-- back bar end -->
+        <div class="divider"></div>
+
+
+        <div class="m-6">
+
+            <!-- features section title -->
+
+            <div class="mb-6">
+                <h2 class="font-bold text-2xl text-[#080808] mb-3">🔥 Welcome to Payooo!</h2>
+                <p class="text-[rgba(8,8,8,.5)] font-normal text-base">Enjoy easy and convenient financial services with
+                    us. Cashout charge is low and </p>
+            </div>
+
+            <!-- features section title end -->
+
+            <!-- features card start -->
+
+            <div class="flex gap-4 mb-4">
+
+                <div class="w-[126px]">
+                    <div class="card bg-base-100 border border-[rgba(8,8,8,.1)]">
+                        <figure class=" px-2 pt-6">
+                            <img src="assets/wallet1.png" class="w-1/3" />
+                        </figure>
+                        <div class="card-body p-3 items-center text-center ">
+                            <h2 class="card-title text-[rgba(8,8,8,.7)] font-medium text-[14px]">Add Money</h2>
+
+                        </div>
+                    </div>
+                </div>
+
+                   <div class="w-[126px]">
+                    <div class="card bg-base-100 border border-[rgba(8,8,8,.1)]">
+                        <figure class=" px-2 pt-6">
+                            <img src="assets/send1.png" class="w-1/3" />
+                        </figure>
+                        <div class="card-body p-3 items-center text-center ">
+                            <h2 class="card-title text-[rgba(8,8,8,.7)] font-medium text-[14px]">Cash-Out</h2>
+
+                        </div>
+                    </div>
+                </div>
+
+                   <div class="w-[126px]">
+                    <div class="card bg-base-100 border border-[rgba(8,8,8,.1)]">
+                        <figure class=" px-2 pt-6">
+                            <img src="assets/money1.png" class="w-1/3" />
+                        </figure>
+                        <div class="card-body px-1 py-3 items-center text-center ">
+                            <h2 class="card-title text-[rgba(8,8,8,.7)] font-medium text-[12px]">Transfer Money</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="flex gap-4">
+
+                <div class="w-[126px]">
+                    <div class="card bg-base-100 border border-[rgba(8,8,8,.1)]">
+                        <figure class=" px-2 pt-6">
+                            <img src="assets/bonus1.png" class="w-1/3" />
+                        </figure>
+                        <div class="card-body p-3 items-center text-center ">
+                            <h2 class="card-title text-[rgba(8,8,8,.7)] font-medium text-[14px]">Get Bonus</h2>
+
+                        </div>
+                    </div>
+                </div>
+
+                   <div class="w-[126px]">
+                    <div class="card bg-base-100 border border-[rgba(8,8,8,.1)]">
+                        <figure class=" px-2 pt-6">
+                            <img src="assets/purse1.png" class="w-1/3" />
+                        </figure>
+                        <div class="card-body p-3 items-center text-center ">
+                            <h2 class="card-title text-[rgba(8,8,8,.7)] font-medium text-[14px]">Pay Bill</h2>
+
+                        </div>
+                    </div>
+                </div>
+
+                   <div class="w-[126px]">
+                    <div class="card bg-base-100 border border-[rgba(8,8,8,.1)]">
+                        <figure class=" px-2 pt-6">
+                            <img src="assets/transaction1.png" class="w-1/3" />
+                        </figure>
+                        <div class="card-body px-2 py-3 items-center text-center ">
+                            <h2 class="card-title text-[rgba(8,8,8,.7)] font-medium text-[14px]">Transactions</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- features card end -->
+
+        </div>
+
+
+
     </main>
 </body>
+
 </html>

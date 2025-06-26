@@ -51,10 +51,10 @@ document.getElementById('login-button').addEventListener('click', function(){
 
     if(mobileNumber === '017' && fourDigitPin === '1234'){
         // console.log('you are logged in successfully')
-        window.location.href= '/payoo.html'
+        window.location.href= '/payoo.html';
     }
     else{
-        alert('Invalid Input, please try again later')
+        alert('Invalid Input, please try again later');
     }
    
 })
