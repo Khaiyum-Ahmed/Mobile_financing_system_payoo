@@ -100,3 +100,8 @@ document.getElementById('cashout-button').addEventListener('click', function(){
         alert('Invalid Input, please try again later')
     }
 })
+
+
+
+// transfer money section ...........
+
