@@ -1,5 +1,3 @@
-console.log('home js connected');
-
 // add money to the account
 
 /**
@@ -75,5 +73,30 @@ document.getElementById('add-money-button').addEventListener('click', function (
 
 
 document.getElementById('cashout-button').addEventListener('click', function(){
-    console.log('withdraw money')
+    // console.log('withdraw money');
+
+    const agentNumber = document.getElementById('input-cashout-agent-number').value;
+    // console.log(agentNumber);
+    // agentNumber.value = '';
+    const cashOutAmount = document.getElementById('input-cashout-amount').value;
+    const cashOutAmountNumber = parseFloat(cashOutAmount);
+    // console.log(cashOutAmount);
+    // cashOutAmount.value = '';
+    const cashOutPinNumber = document.getElementById('input-cashout-pin-number').value;
+    // console.log(cashOutPinNumber);
+    // cashOutPinNumber.value = '';
+
+    if(cashOutPinNumber === '1234'){
+        // console.log('you can withdraw money');
+        const accontBalance = document.getElementById('account-balance').innerText;
+        const accontBalanceNumber = parseFloat(accontBalance);
+        const newBalance = accontBalanceNumber - cashOutAmountNumber;
+        // console.log(newBalance);
+
+        document.getElementById('account-balance').innerText = newBalance;
+
+    }
+    else{
+        alert('Invalid Input, please try again later')
+    }
 })
