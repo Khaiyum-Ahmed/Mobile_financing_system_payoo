@@ -154,7 +154,7 @@
         <!-- features card form start -->
 
         <!-- add money form start -->
-        <div class="w-[402px] mx-auto">
+        <div class="hidden w-[402px] mx-auto">
             <h2 class="mb-4 font-bold text-[18px] text-[#080808]">Add Money</h2>
 
             <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -192,7 +192,8 @@
                             class="input rounded-full font-light text-base bg-[#F4F5F7] text-[#080808] opacity-70"
                             placeholder="Enter 4 digit pin number" />
 
-                        <button id="add-money-button" class="btn bg-[#0874F2] text-white font-semibold text-xl rounded-full mt-4">Add
+                        <button id="add-money-button"
+                            class="btn bg-[#0874F2] text-white font-semibold text-xl rounded-full mt-4">Add
                             money</button>
                     </fieldset>
                 </div>
@@ -200,7 +201,40 @@
         </div>
 
         <!-- add money form end -->
+        <!-- cash out form start -->
 
+        <div class="w-[402px] mx-auto">
+            <h2 class="mb-4 font-bold text-[18px] text-[#080808]">Cash Out</h2>
+
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+
+                <div class="card-body ">
+                    <fieldset class="fieldset gap-y-3">
+
+                        <label class="label font-medium text-[#080808] text-base">Agent Number</label>
+                        <input id="input-cashout-agent-number" type="text"
+                            class="input rounded-full font-light text-base bg-[#F4F5F7] text-[#080808] opacity-70"
+                            placeholder="Enter 11 digit number" />
+
+                        <label class="label font-medium text-[#080808] text-base">Amount</label>
+                        <input id="input-cashout-amount" type="text"
+                            class="input rounded-full font-light text-base bg-[#F4F5F7] text-[#080808] opacity-70"
+                            placeholder="Enter Amount to withdraw" />
+
+                        <label class="label font-medium text-[#080808] text-base">Pin Number</label>
+                        <input id="input-cashout-pin-number" type="password"
+                            class="input rounded-full font-light text-base bg-[#F4F5F7] text-[#080808] opacity-70"
+                            placeholder="Enter 4 digit pin number" />
+
+                        <button id="cashout-button"
+                            class="btn bg-[#0874F2] text-white font-semibold text-xl rounded-full mt-4">Withdraw
+                            money</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+        <!-- cash out form end -->
 
         <!-- features card form end -->
     </main>

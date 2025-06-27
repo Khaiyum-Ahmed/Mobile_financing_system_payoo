@@ -61,3 +61,19 @@ document.getElementById('add-money-button').addEventListener('click', function (
         alert('Invalid Input, please try again later')
     }
 })
+
+
+
+
+
+
+
+
+
+
+// CashOut or withdraw money section ...........
+
+
+document.getElementById('cashout-button').addEventListener('click', function(){
+    console.log('withdraw money')
+})
