@@ -349,10 +349,11 @@
        
         <div id="transaction-history" class="hidden">
              <h2 class="mb-4 font-bold text-[18px] text-[#080808]">Transaction History</h2>
+             
         <div class="collapse collapse-arrow bg-base-100 border border-base-300">
             <input type="radio" name="my-accordion-2" checked="checked" />
             <div class="collapse-title font-semibold"><div><img src="assets/wallet1.png" alt=""></div> Electricity Bill</div>
-            <div class="collapse-content text-sm">today: 01:44 am</div>
+            <div id="transaction-container" class="collapse-content text-sm">today: 01:44 am</div>
         </div>
         <div class="collapse collapse-arrow bg-base-100 border border-base-300">
             <input type="radio" name="my-accordion-2" />
@@ -377,7 +378,7 @@
 
         <!-- features card form end -->
     </main>
-
+    <script src="js/function.js"></script>
     <script src="js/payoo.js"></script>
     <script src="js/features.js"></script>
 </body>
