@@ -251,3 +251,63 @@ document.getElementById('transfer-money-button').addEventListener('click', funct
     }
 
 })
+
+
+
+// Pay Bill section ...........
+
+document.getElementById('pay-bill-button').addEventListener('click', function(){
+    // console.log('pay bill done')
+
+    const billerAccontNumber = getInputFieldValue('input-biller-account-number');
+    // console.log(billerAccontNumber);
+
+    const payAmount = getInputFieldValue('input-pay-amount');
+    // console.log(payAmount);
+
+    const payPinNumber = getInputFieldValue('input-pay-pin-number');
+    console.log(payPinNumber);
+
+    // input number validation...
+
+    if(isNaN(billerAccontNumber) || isNaN(payAmount) || isNaN(payPinNumber)){
+        alert('Invalid Input');
+        return;
+    };
+
+    // pin number validation wrong way
+
+    if(payPinNumber === 1212){
+        const balance = getFieldValue('account-balance');
+        
+
+        if(payAmount > balance){
+            alert('Insaficient balance');
+            return;
+        };
+
+        const newBalance = balance - payAmount ;
+        // console.log(newBalance);
+        document.getElementById('account-balance').innerText = newBalance;
+
+          // transaction History...
+
+        const div = document.createElement('div');
+        div.innerHTML = 
+        `
+               <div class="bg-yellow-100 rounded-2xl space-y-3 p-5">
+                <h2 class="text-2xl font-semibold text-pink-900" > Pay Bill </h2>
+                <p class="text-base text-orange-700 font-medium" > ${payAmount} TK Pay-Bill successful. New Balance Remaining: ${newBalance} TK </P>
+                </div>
+        `;
+
+        document.getElementById('transaction-container').appendChild(div)
+
+    };
+    // else {
+    //     alert('Invalid input,please try again later');
+    // };
+   
+
+
+});
