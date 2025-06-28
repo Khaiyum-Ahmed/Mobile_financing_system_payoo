@@ -108,6 +108,9 @@ document.getElementById('add-money-button').addEventListener('click', function (
     else {
         alert('Invalid Input, please try again later');
     }
+    // document.getElementById('input-ammount-add').value = '';
+  resetInputField();
+
 });
 
 

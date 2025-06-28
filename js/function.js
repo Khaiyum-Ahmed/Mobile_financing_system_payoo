@@ -11,3 +11,12 @@ function getInputFieldValue (id){
     return inputValueNumber;
 };
 
+// reset input field
+
+function resetInputField(){
+    document.getElementById('input-ammount-add').value = '';
+    document.getElementById('input-pin-number').value = '';
+    document.getElementById('input-bank-account').value = '';
+    // document.getElementById('input-select-bank').value = '';
+    
+}
