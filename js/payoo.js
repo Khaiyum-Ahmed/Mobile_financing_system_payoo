@@ -1,6 +1,6 @@
 // LogOut function 
 
-document.getElementById('logout-btn').addEventListener('click', function(){
+document.getElementById('logout-btn').addEventListener('click', function () {
     // console.log('logout')
     window.location.href = '/index.html';
 });
@@ -29,7 +29,7 @@ document.getElementById('logout-btn').addEventListener('click', function(){
 //     // if using form tag then prevent page reload after form submit
 //     // event.preventDefault();
 
-    
+
 //     console.log('add money button clicked');
 //     const bankSelect = document.getElementById('input-select-bank').value;
 
@@ -54,7 +54,7 @@ document.getElementById('logout-btn').addEventListener('click', function(){
 
 //     if (inputPinNumber === '1234') {
 
-        
+
 
 //         // step 5: add addMoney input with balance
 
@@ -75,20 +75,20 @@ document.getElementById('logout-btn').addEventListener('click', function(){
 
 
 
-document.getElementById('add-money-button').addEventListener ('click', function() {
+document.getElementById('add-money-button').addEventListener('click', function () {
     const addMoney = getInputFieldValue('input-ammount-add');
     // console.log(addMoney);
-   
+
     const addMoneyPin = getInputFieldValue('input-pin-number');
     // console.log(addMoneyPin);
-    
 
-    if(isNaN(addMoney) || isNaN(addMoneyPin)){
+
+    if (isNaN(addMoney) || isNaN(addMoneyPin)) {
         alert('Invalid Input Failed');
         return;
     }
 
-    if(addMoneyPin === 1234 ){
+    if (addMoneyPin === 1234) {
         const balance = getFieldValue('account-balance');
         const newBalance = balance + addMoney;
         // console.log(newBalance)
@@ -105,7 +105,7 @@ document.getElementById('add-money-button').addEventListener ('click', function(
         document.getElementById('transaction-container').appendChild(p);
 
     }
-    else{
+    else {
         alert('Invalid Input, please try again later');
     }
 });
@@ -153,7 +153,7 @@ document.getElementById('add-money-button').addEventListener ('click', function(
 
 
 
-document.getElementById('cashout-button').addEventListener('click', function(){
+document.getElementById('cashout-button').addEventListener('click', function () {
     // console.log('cashout')
 
     const cashoutAgentNumber = getInputFieldValue('input-cashout-agent-number');
@@ -164,17 +164,17 @@ document.getElementById('cashout-button').addEventListener('click', function(){
     // console.log(cashoutPinNumber);
 
     // input number validation .....
-    if(isNaN(cashoutAgentNumber) || isNaN(cashoutAmount) || isNaN(cashoutPinNumber)){
+    if (isNaN(cashoutAgentNumber) || isNaN(cashoutAmount) || isNaN(cashoutPinNumber)) {
         alert('Invalid Input Failed');
         return;
     }
 
     // wrong way to pin number validation ....
 
-    if(cashoutPinNumber === 1234){
+    if (cashoutPinNumber === 1234) {
         // console.log('you can withdraw money');
         const balance = getFieldValue('account-balance');
-        if(cashoutAmount > balance){
+        if (cashoutAmount > balance) {
             alert("You don't have sufficient Balance in your Account.");
             return;
         }
@@ -182,7 +182,7 @@ document.getElementById('cashout-button').addEventListener('click', function(){
         document.getElementById('account-balance').innerText = newBalance;
 
         // transaction history....
- 
+
 
         const division = document.createElement('div');
         division.innerHTML = `
@@ -194,7 +194,7 @@ document.getElementById('cashout-button').addEventListener('click', function(){
 
         document.getElementById('transaction-container').appendChild(division);
     }
-    else{
+    else {
         alert('Invalid Input, Please try again later')
     }
 
@@ -204,7 +204,7 @@ document.getElementById('cashout-button').addEventListener('click', function(){
 
 // transfer money section ...........
 
-document.getElementById('transfer-money-button').addEventListener('click', function(){
+document.getElementById('transfer-money-button').addEventListener('click', function () {
     // console.log('transfer money successfull');
     const userAccountNumber = getInputFieldValue('input-user-account-number');
     // console.log(userAccountNumber);
@@ -216,16 +216,16 @@ document.getElementById('transfer-money-button').addEventListener('click', funct
     // console.log(transferPinNumber);
 
     // input number validation...
-    if(isNaN(userAccountNumber) || isNaN(transferAmount) || isNaN(transferPinNumber)){
+    if (isNaN(userAccountNumber) || isNaN(transferAmount) || isNaN(transferPinNumber)) {
         alert('Incorrect Input field');
         return;
     };
 
     // pin number validation This is wrong way to validate...
 
-    if(transferPinNumber === 1020){
+    if (transferPinNumber === 1020) {
         const balance = getFieldValue('account-balance');
-        if(transferAmount > balance){
+        if (transferAmount > balance) {
             alert("You don't have sufficient Balance to transfer, Please Add Money in your account");
             return;
         }
@@ -236,8 +236,8 @@ document.getElementById('transfer-money-button').addEventListener('click', funct
         // transaction History...
 
         const div = document.createElement('div');
-        div.innerHTML = 
-        `
+        div.innerHTML =
+            `
                <div class="bg-pink-200 rounded-2xl space-y-3 p-5">
                 <h2 class="text-2xl font-semibold text-blue-700" > Transfer Money </h2>
                 <p class="text-base text-slate-700 font-medium" > ${transferAmount} TK transfer successful. New Balance Remaining: ${newBalance} TK </P>
@@ -246,7 +246,7 @@ document.getElementById('transfer-money-button').addEventListener('click', funct
 
         document.getElementById('transaction-container').appendChild(div)
     }
-    else{
+    else {
         alert('Invalid Input, please try again later')
     }
 
@@ -256,7 +256,7 @@ document.getElementById('transfer-money-button').addEventListener('click', funct
 
 // Pay Bill section ...........
 
-document.getElementById('pay-bill-button').addEventListener('click', function(){
+document.getElementById('pay-bill-button').addEventListener('click', function () {
     // console.log('pay bill done')
 
     const billerAccontNumber = getInputFieldValue('input-biller-account-number');
@@ -270,31 +270,31 @@ document.getElementById('pay-bill-button').addEventListener('click', function(){
 
     // input number validation...
 
-    if(isNaN(billerAccontNumber) || isNaN(payAmount) || isNaN(payPinNumber)){
+    if (isNaN(billerAccontNumber) || isNaN(payAmount) || isNaN(payPinNumber)) {
         alert('Invalid Input');
         return;
     };
 
     // pin number validation wrong way
 
-    if(payPinNumber === 1212){
+    if (payPinNumber === 1212) {
         const balance = getFieldValue('account-balance');
-        
 
-        if(payAmount > balance){
+
+        if (payAmount > balance) {
             alert('Insaficient balance');
             return;
         };
 
-        const newBalance = balance - payAmount ;
+        const newBalance = balance - payAmount;
         // console.log(newBalance);
         document.getElementById('account-balance').innerText = newBalance;
 
-          // transaction History...
+        // transaction History...
 
         const div = document.createElement('div');
-        div.innerHTML = 
-        `
+        div.innerHTML =
+            `
                <div class="bg-yellow-100 rounded-2xl space-y-3 p-5">
                 <h2 class="text-2xl font-semibold text-pink-900" > Pay Bill </h2>
                 <p class="text-base text-orange-700 font-medium" > ${payAmount} TK Pay-Bill successful. New Balance Remaining: ${newBalance} TK </P>
@@ -303,11 +303,12 @@ document.getElementById('pay-bill-button').addEventListener('click', function(){
 
         document.getElementById('transaction-container').appendChild(div)
 
+    } 
+
+    else {
+        alert('Invalid input,please try again later');
     };
-    // else {
-    //     alert('Invalid input,please try again later');
-    // };
-   
+
 
 
 });
