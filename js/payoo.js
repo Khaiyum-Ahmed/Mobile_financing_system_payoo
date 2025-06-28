@@ -174,6 +174,10 @@ document.getElementById('cashout-button').addEventListener('click', function(){
     if(cashoutPinNumber === 1234){
         // console.log('you can withdraw money');
         const balance = getFieldValue('account-balance');
+        if(cashoutAmount > balance){
+            alert("You don't have sufficient Balance in your Account.");
+            return;
+        }
         const newBalance = balance - cashoutAmount;
         document.getElementById('account-balance').innerText = newBalance;
 
@@ -182,7 +186,7 @@ document.getElementById('cashout-button').addEventListener('click', function(){
 
         const division = document.createElement('div');
         division.innerHTML = `
-            <div class ="bg-red-400 rounded-xl p-4">
+            <div class ="bg-red-400 rounded-xl p-4 space-y-2">
                 <h2 class = "text-2xl font-medium">Withdraw Money</h2>
                 <p class="text-base text-yellow-400 " >${cashoutAmount} TK CashOut. New Balance Available = ${newBalance} TK</p>
             </div>
@@ -200,3 +204,50 @@ document.getElementById('cashout-button').addEventListener('click', function(){
 
 // transfer money section ...........
 
+document.getElementById('transfer-money-button').addEventListener('click', function(){
+    // console.log('transfer money successfull');
+    const userAccountNumber = getInputFieldValue('input-user-account-number');
+    // console.log(userAccountNumber);
+
+    const transferAmount = getInputFieldValue('input-transfer-amount');
+    // console.log(transferAmount);
+
+    const transferPinNumber = getInputFieldValue('input-transfer-pin-number');
+    // console.log(transferPinNumber);
+
+    // input number validation...
+    if(isNaN(userAccountNumber) || isNaN(transferAmount) || isNaN(transferPinNumber)){
+        alert('Incorrect Input field');
+        return;
+    };
+
+    // pin number validation This is wrong way to validate...
+
+    if(transferPinNumber === 1020){
+        const balance = getFieldValue('account-balance');
+        if(transferAmount > balance){
+            alert("You don't have sufficient Balance to transfer, Please Add Money in your account");
+            return;
+        }
+        const newBalance = balance - transferAmount;
+
+        document.getElementById('account-balance').innerText = newBalance;
+
+        // transaction History...
+
+        const div = document.createElement('div');
+        div.innerHTML = 
+        `
+               <div class="bg-pink-200 rounded-2xl space-y-3 p-5">
+                <h2 class="text-2xl font-semibold text-blue-700" > Transfer Money </h2>
+                <p class="text-base text-slate-700 font-medium" > ${transferAmount} TK transfer successful. New Balance Remaining: ${newBalance} TK </P>
+                </div>
+        `;
+
+        document.getElementById('transaction-container').appendChild(div)
+    }
+    else{
+        alert('Invalid Input, please try again later')
+    }
+
+})
