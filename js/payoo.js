@@ -1,3 +1,13 @@
+// LogOut function 
+
+document.getElementById('logout-btn').addEventListener('click', function(){
+    // console.log('logout')
+    window.location.href = '/index.html';
+});
+
+
+
+
 // add money to the account
 
 /**
