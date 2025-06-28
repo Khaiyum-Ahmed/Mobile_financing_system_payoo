@@ -73,6 +73,8 @@ document.getElementById('logout-btn').addEventListener('click', function(){
 // })
 
 
+
+
 document.getElementById('add-money-button').addEventListener ('click', function() {
     const addMoney = getInputFieldValue('input-ammount-add');
     // console.log(addMoney);
@@ -93,6 +95,8 @@ document.getElementById('add-money-button').addEventListener ('click', function(
         document.getElementById('account-balance').innerText = newBalance;
         //  addMoney = '';
         //  addMoneyPin = '';
+
+
         // add to transaction history...
 
         const p = document.createElement('p');
@@ -143,7 +147,54 @@ document.getElementById('add-money-button').addEventListener ('click', function(
 //     else{
 //         alert('Invalid Input, please try again later')
 //     }
-// })
+// });
+
+
+
+
+
+document.getElementById('cashout-button').addEventListener('click', function(){
+    // console.log('cashout')
+
+    const cashoutAgentNumber = getInputFieldValue('input-cashout-agent-number');
+    // console.log(cashoutAgentNumber);
+    const cashoutAmount = getInputFieldValue('input-cashout-amount');
+    // console.log(cashoutAmount);
+    const cashoutPinNumber = getInputFieldValue('input-cashout-pin-number');
+    // console.log(cashoutPinNumber);
+
+    // input number validation .....
+    if(isNaN(cashoutAgentNumber) || isNaN(cashoutAmount) || isNaN(cashoutPinNumber)){
+        alert('Invalid Input Failed');
+        return;
+    }
+
+    // wrong way to pin number validation ....
+
+    if(cashoutPinNumber === 1234){
+        // console.log('you can withdraw money');
+        const balance = getFieldValue('account-balance');
+        const newBalance = balance - cashoutAmount;
+        document.getElementById('account-balance').innerText = newBalance;
+
+        // transaction history....
+ 
+
+        const division = document.createElement('div');
+        division.innerHTML = `
+            <div class ="bg-red-400 rounded-xl p-4">
+                <h2 class = "text-2xl font-medium">Withdraw Money</h2>
+                <p class="text-base text-yellow-400 " >${cashoutAmount} TK CashOut. New Balance Available = ${newBalance} TK</p>
+            </div>
+        `
+
+        document.getElementById('transaction-container').appendChild(division);
+    }
+    else{
+        alert('Invalid Input, Please try again later')
+    }
+
+})
 
 
 
