@@ -293,10 +293,12 @@ document.getElementById('pay-bill-button').addEventListener('click', function ()
         // transaction History...
 
         const div = document.createElement('div');
+         const now = new Date();
         div.innerHTML =
             `
                <div class="bg-yellow-100 rounded-2xl space-y-3 p-5">
                 <h2 class="text-2xl font-semibold text-pink-900" > Pay Bill </h2>
+                <p>Date: ${now}</P>
                 <p class="text-base text-orange-700 font-medium" > ${payAmount} TK Pay-Bill successful. New Balance Remaining: ${newBalance} TK </P>
                 </div>
         `;
